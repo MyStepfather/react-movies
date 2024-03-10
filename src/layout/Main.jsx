@@ -10,7 +10,7 @@ class Main extends Component {
     }
     getFilms = (q, query, filter='') => {
         this.setState({isLoading: true});
-        fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&${q}=${query}&type=${filter}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&${q}=${query}&type=${filter}`)
             .then(res => res.json())
             .then(data => {
                 if (data.Response === "True" && data.Search.length) {
